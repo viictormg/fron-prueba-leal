@@ -2,15 +2,15 @@
   <div class="w-full md:w-auto">
     <div class="rounded overflow-hidden shadow-xl">
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{amount}}</div>
+        <div class="font-bold text-xl mb-2">Puntos: {{points}}</div>
         <p class="text-gray-700 text-base">
+          valor compra: {{amount}} 
         </p>
+        <p v-if="add">Ganados</p>
+        <p v-else>Redimidos</p>
       </div>
       <div class="px-6 pt-4 pb-2">
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-black mr-2 mb-2"
-          >ss</span
-        >
+        
         <i class="fa-solid fa-cart-circle-plus"></i>
       </div>
     </div>
@@ -26,6 +26,14 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    points : {
+      type : Number,
+      required : true
+    },
+    add : {
+      type: Boolean,
+      required: true
+    }
   },
 });
 </script>
