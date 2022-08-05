@@ -19,7 +19,7 @@
           width="10px"
         /> -->
       </span>
-      <button class="bg-green-600 text-white px-3 py-1 rounded-md">
+      <button @click="$emit('click')" class="bg-green-600 text-white px-3 py-1 rounded-md">
         Agregar +
       </button>
     </div>
@@ -30,6 +30,8 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+
+  emits :["click"],
   props: {
     id: {
       type: String,

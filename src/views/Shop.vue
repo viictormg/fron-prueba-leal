@@ -1,6 +1,6 @@
 <template>
   <div class="m-4">
-    <p class="text-center text-5xl">Tienda barrotes</p>
+    <p class="text-center text-5xl">Tienda Abarrotes</p>
     <section>
       <h1 class="my-3">Productos</h1>
       <div class="flex">
@@ -76,7 +76,7 @@ export default defineComponent({
       alert(responseJson.message);
 
       
-      store.$dispose
+      store.$reset()
     };
 
     return { products, CardProduct, store, car, total, buy };
